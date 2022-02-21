@@ -11,7 +11,7 @@ https://ipfs.io/
 
 # what works
 
-We can spawn an ephemeral node on the server part for the current run and store and retrieve data from db.
+We can spawn an ephemeral node on the server for the current run and store and retrieve data from db.
 
 # what doesn't work
 
