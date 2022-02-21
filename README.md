@@ -11,11 +11,13 @@ https://ipfs.io/
 
 # what works
 
-We can spawn an ephemeral node on the server part for the current run and store and retrieve data in db
+We can spawn an ephemeral node on the server part for the current run and store and retrieve data in db.
 
 # what doesn't work
 
-We can't connect to orbit-db from the wasm itself since IPFS needs access to the host file system and wasm doesn't support host bindings yet
+We can't connect to orbit-db from the wasm itself since IPFS needs access to the host file system and wasm doesn't support host bindings yet.
+
+Can't connect to a local IPFS daemon because the go-ipfs-api doesn't expose access to the node.
 
 # ideas
 
