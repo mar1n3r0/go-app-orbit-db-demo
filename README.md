@@ -17,7 +17,7 @@ We can spawn an ephemeral node on the server part for the current run and store 
 
 We can't connect to orbit-db from the wasm itself since IPFS needs access to the host file system and wasm doesn't support host bindings yet.
 
-Can't connect to a local IPFS daemon because the go-ipfs-api doesn't expose access to the node.
+Can't connect to a local IPFS daemon because the go-ipfs-api shell doesn't expose the CoreAPI of the node needed for establishing the connection.
 
 # ideas
 
