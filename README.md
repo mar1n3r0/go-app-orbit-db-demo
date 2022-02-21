@@ -19,4 +19,4 @@ We can't connect to orbit-db from the wasm itself since IPFS needs access to the
 
 # ideas
 
-It would make sense for IPFS to include orbit-db implementation and expose it via the http-client-api. That way we can call the local node via http from the wasm itself and reuse the daemon rather than programattically spawning temporary nodes from within the client app.
+It would make sense for IPFS to include orbit-db implementation and expose it via the http-client-api. That way we can call the local node via http from the wasm itself and use the local daemon rather than programattically spawning temporary nodes from within the client app.
