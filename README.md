@@ -7,18 +7,27 @@ https://github.com/maxence-charriere/go-app
 
 https://github.com/berty/go-orbit-db
 
-https://ipfs.io/
+https://github.com/ipfs/go-ipfs-http-client
 
 # what works
-
-We can spawn an ephemeral node on the server for the current run and store and retrieve data from db.
+We can connect to the local IPFS daemon via the http client
 
 # what doesn't work
 
-We can't connect to orbit-db from the wasm itself since IPFS needs access to the host file system and wasm doesn't support host bindings yet.
+We can't connect to orbit-db from the wasm itself since IPFS needs access to the host file system and wasm doesn't support access to the host os.
 
-Can't connect to a local IPFS daemon because the go-ipfs-api shell doesn't expose the CoreAPI of the node needed for establishing the connection.
+# github.com/syndtr/goleveldb/leveldb/storage
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:107:16: undefined: newFileLock
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:123:13: cannot assign error to err in multiple assignment
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:127:16: cannot assign error to err in multiple assignment
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:192:3: undefined: rename
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:267:12: undefined: rename
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:272:12: undefined: syncDir
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:555:9: undefined: rename
+../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:591:13: undefined: syncDir
 
 # ideas
 
-It would make sense for IPFS to include orbit-db implementation and expose it via the http-client-api. That way we can call the local node via http from the wasm itself and use the local daemon rather than programattically spawning temporary nodes from within the client app.
+It would make sense for IPFS to include orbit-db implementation and expose it via the http client. 
+
+WASI could be an alternative.
