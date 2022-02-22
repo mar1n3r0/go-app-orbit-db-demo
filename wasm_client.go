@@ -4,10 +4,6 @@
 
 package main
 
-func initIPFS() {
-
-}
-
 func initServer() {
 
 }
