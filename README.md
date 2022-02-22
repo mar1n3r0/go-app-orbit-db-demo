@@ -14,7 +14,7 @@ We can connect to the local IPFS daemon via the http client
 
 # what doesn't work
 
-We can't connect to orbit-db from the wasm itself since it requires access to the host file system and wasm doesn't support access to the host os.
+We can't connect to orbit-db from the wasm itself since it requires access to the host file system and wasm doesn't support that(wasi does that).
 
 # github.com/syndtr/goleveldb/leveldb/storage
 ../../go/pkg/mod/github.com/syndtr/goleveldb@v1.0.0/leveldb/storage/file_storage.go:107:16: undefined: newFileLock
