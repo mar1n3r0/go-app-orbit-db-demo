@@ -28,6 +28,6 @@ We can't connect to orbit-db from the wasm itself since IPFS needs access to the
 
 # ideas
 
-It would make sense for IPFS to include orbit-db implementation and expose it via the http client. 
+It would make sense for IPFS to include orbit-db implementation as a user data store and expose it via the http client. 
 
 WASI could be an alternative.
